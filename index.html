@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#173b35">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="style.css">
+<title>دفتر کارهای من</title>
+</head>
+<body>
+<header>
+  <div class="brand"><div class="mark">✓</div><div><h1>دفتر کارهای من</h1><p>مرکز فرماندهی کارهای روزانه</p></div></div>
+  <button id="shareAll" class="outline">ارسال گزارش به دستیار</button>
+</header>
+<main>
+  <section class="stats">
+    <div><b id="openCount">۰</b><span>باز</span></div>
+    <div><b id="todayCount">۰</b><span>موعد امروز</span></div>
+    <div><b id="doneCount">۰</b><span>انجام‌شده</span></div>
+  </section>
+  <section class="panel">
+    <h2>ثبت مأموریت جدید</h2>
+    <form id="taskForm">
+      <label>شرح کار<input id="taskTitle" required maxlength="140" placeholder="مثلاً پیگیری انتشار محتوای پیج"></label>
+      <div class="grid">
+        <label>واحد<select id="unit"><option>هیئت</option><option>شغلی و اداری</option><option>شخصی و خانوادگی</option><option>پروژه‌ها</option><option>سایر</option></select></label>
+        <label>اولویت<select id="priority"><option>عادی</option><option selected>بالا</option><option>فوری</option></select></label>
+      </div>
+      <label>مهلت<input id="due" type="date"></label>
+      <button class="primary" type="submit">＋ ثبت کار</button>
+    </form>
+  </section>
+  <section class="tasks-head"><h2>فهرست مأموریت‌ها</h2><select id="filter"><option value="all">همه کارها</option><option value="open">کارهای باز</option><option value="done">انجام‌شده</option></select></section>
+  <section id="tasks" class="tasks"></section>
+  <p class="note">اطلاعات در همین گوشی ذخیره می‌شود. برای اینکه دستیار بتواند پیگیری کند، گزارش را با دکمه بالا به همین گفت‌وگو بفرست.</p>
+</main>
+<script src="app.js"></script>
+</body></html>
