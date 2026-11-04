@@ -9,7 +9,19 @@
 <link rel="stylesheet" href="style.css">
 <title>دفتر کارهای من</title>
 </head>
-<body>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+<script>
+const SUPABASE_URL = "https://exypwrcjlyszzhglfrrc.supabase.co/rest/v1/";
+const SUPABASE_KEY = "sb_publishable_aOqeUUC7QWCZRNLowphqhg_rbEW_m_f";
+
+const db = window.supabase.createClient(
+  SUPABASE_URL,
+  SUPABASE_KEY
+);
+
+console.log("Supabase Connected");
+</script><body>
 <header>
   <div class="brand"><div class="mark">✓</div><div><h1>دفتر کارهای من</h1><p>مرکز فرماندهی کارهای روزانه</p></div></div>
   <button id="shareAll" class="outline">ارسال گزارش به دستیار</button>
